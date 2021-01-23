@@ -12,10 +12,13 @@
   - 일반문제는 주차별로 주제를 정한다. (ex 1주차는 힙, 2주차는 BFS)
 
 ## :green_book:  문제사이트
-:point_right:[기출문제](https://swexpertacademy.com/main/userpage/code/userProblemBoxDetail.do?probBoxId=AV5Po0AqAPwDFAUq&leftPage=1&curPage=userpage&userId=SWEAC&&&&)
+:point_right: [기출문제 : SW Expert Academy](https://swexpertacademy.com/main/userpage/code/userProblemBoxDetail.do?probBoxId=AV5Po0AqAPwDFAUq&leftPage=1&curPage=userpage&userId=SWEAC&&&&)
 
-:point_right:[일반문제](https://programmers.co.kr/learn/challenges)
+:point_right:[일반문제 : Programmers](https://programmers.co.kr/learn/challenges)
 
+
+## :orange_book:  주차별 일정
+1주차 | 힙(Heap)
 
 
 
