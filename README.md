@@ -1,15 +1,17 @@
 # :computer: 완벽한 코딩테스트 준비를 위한 알고리즘 공부
 
 ## :pencil2:  사용언어
-> Java를 사용
 - ##### JAVA
 
 ## :blue_book:  공부방법
-+ 1주일에 1문제씩 삼성 코딩테스트 기출문제를 푼다.
++ "자료구조와 알고리즘을 함께 JAVA" 도서 연습문제 풀이. 
++ 1주일에 1문제씩 삼성 코딩테스트 기출문제 풀이
 * 1주일에 적어도 2문제씩 일반문제를 푼다. 
   - 일반문제는 주차별로 주제를 정한다. (ex 1주차는 힙, 2주차는 BFS)
 
 ## :green_book:  문제사이트
+:point_right: [도서 : 자료구조와 알고리즘을 함께 JAVA](https://github.com/bjpublic/javarithms)
+
 :point_right: [기출문제 : SW Expert Academy](https://swexpertacademy.com/main/userpage/code/userProblemBoxDetail.do?probBoxId=AV5Po0AqAPwDFAUq&leftPage=1&curPage=userpage&userId=SWEAC&&&&)
 
 :point_right:[일반문제 : Programmers](https://programmers.co.kr/learn/challenges)
@@ -18,7 +20,7 @@
 ## :orange_book:  주차별 일정
 |주차|날짜|내용|
 |------|---|---|
-|1주차|2020.01.25~2020.01.31|힙(Heap)|
+|0주차|2021.09.20~|도서|
 
 ---
 
