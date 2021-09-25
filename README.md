@@ -2,8 +2,6 @@
 
 ## :pencil2:  사용언어
 > Java를 사용
-+ ##### C++
-* ##### Python
 - ##### JAVA
 
 ## :blue_book:  공부방법
