@@ -1,4 +1,4 @@
-package Practice_2;
+package chap02;
 
 public class Practice02_4 {
     public static void main(String[] args) {
