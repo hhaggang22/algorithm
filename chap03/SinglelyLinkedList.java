@@ -47,6 +47,32 @@ public class SinglelyLinkedList {
         pointer.next = new Node(value, null);
     }
 
+    public void delete(int value) {
+        Node pointer = this.head;
+
+        // 맨 앞의 노드를 삭제
+        if (pointer.getValue() == value) {
+            Node removedNode = this.head;
+            this.head = this.head.next;
+
+            removedNode = null;
+            return;
+        }
+
+        Node temp = pointer; // 삭제할 노드 앞의 노드를 가리키는 포인터
+        if (pointer.getValue() != value && pointer.next != null) {
+            temp = pointer;
+            pointer = pointer.next;
+        }
+
+        if (pointer.next == null) { // 끝까지 갔다는 의미
+            temp.next = null;
+        } else {
+            temp.next = pointer.next;
+        }
+        pointer = null;
+    }
+
     // 모든 노드를 출력하는 함수
     public void printAll() {
         Node pointer = this.head;
