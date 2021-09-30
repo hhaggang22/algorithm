@@ -47,6 +47,37 @@ public class CircularDoubleLinkedList {
 
     // 삭제
     public void delete(int value) {
+        Node temp = this.head.next;
+        if (this.head == this.tail && this.head.getValue() == value) {
+            this.head = null;
+            this.tail = null;
+            return;
+        }
+
+        while (temp != this.head) {
+            if (temp.getValue() != value) {
+                temp = temp.next;
+                continue;
+            }
+
+            if (temp == this.tail) {
+                temp.prev.next = this.tail.next;
+                temp.next.prev = this.tail.prev;
+                this.tail = this.head.prev;
+            } else {
+                temp.prev.next = temp.next;
+                temp.next.prev = temp.prev;
+            }
+
+            temp = null;
+            break;
+        }
+
+        if (temp == this.head) {
+            temp.prev.next = temp.next;
+            temp.next.prev = temp.prev;
+            this.head = this.tail.next;
+        }
 
     }
 
