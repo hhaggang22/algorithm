@@ -8,7 +8,7 @@ public class Practice03_1 {
         singlyLinkedList.append(4);
         singlyLinkedList.append(5);
         singlyLinkedList.append(6);
-        singlyLinkedList.append(7);
+        singlyLinkedList.append(6);
 
         singlyLinkedList.printAll();
     }

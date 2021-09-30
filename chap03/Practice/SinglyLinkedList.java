@@ -48,6 +48,9 @@ public class SinglyLinkedList {
             pointer = pointer.next;
         }
 
+        if (pointer.getValue() == value) { // 항상 마지막 노드 때문에 조건이 있다면 한번 더 써줘야 한다.
+            return;
+        }
         pointer.next = new Node(value, null);
     }
 
