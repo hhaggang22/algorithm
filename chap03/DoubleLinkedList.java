@@ -57,6 +57,33 @@ public class DoubleLinkedList {
 
     }
 
+    // 삭제
+    public void delete(int value) {
+        Node pointer = this.head;
+        if (pointer.getValue() == value) {
+            Node removedNode = this.head;
+            this.head = this.head.next;
+
+            removedNode = null;
+            return;
+        }
+
+        Node prevNode = pointer;
+        while (pointer.getValue() != value && pointer.next != null) {
+            prevNode = pointer;
+            pointer = pointer.next;
+        }
+
+        Node temp = pointer.next;
+        if (temp == null) {
+            pointer.next = null;
+        } else {
+            temp.prev = prevNode;
+            prevNode.next = pointer.next;
+        }
+        pointer = null;
+    }
+
     public void printPrevNode(int value) {
         if (this.head == null) {
             System.out.println("노드가 아무것도 없음");
