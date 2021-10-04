@@ -1,4 +1,5 @@
 package chap04;
+
 import java.util.*;
 
 public class Practice04_1 {
@@ -11,14 +12,19 @@ public class Practice04_1 {
         System.out.println("n을 입력해주세요.");
         int n = scanner.nextInt();
 
-    
-        
+        System.out.println(String.format("result of %s is, ", squared(x, n)));
+
     }
 
-    int result = 0; 
-    public int squared(int x, int n){
-       
-        return result;
+    private static int squared(int x, int n) {
+        if(n == 0){
+            return 1;
+        }
+        else if(n == 1){
+            return x;
+        }
+        
+        return x * squared(x, n-1);
     }
-    
+
 }
