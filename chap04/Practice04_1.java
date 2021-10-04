@@ -17,14 +17,11 @@ public class Practice04_1 {
     }
 
     private static int squared(int x, int n) {
-        if(n == 0){
-            return 1;
+        if (n == 1) {
+            return x; //기저조건 x의 1제곱은 무조건 x이다. 
         }
-        else if(n == 1){
-            return x;
-        }
-        
-        return x * squared(x, n-1);
+
+        return x * squared(x, n - 1);
     }
 
 }
