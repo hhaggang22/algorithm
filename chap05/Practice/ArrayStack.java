@@ -44,15 +44,28 @@ public class ArrayStack {
     public boolean contains(Object value) {
         Object data = this.peek();
         while (data != value) {
-            System.out.println("data is " + data.toString());
             if (top == 0) {
                 return false;
             }
             --top;
-            System.out.println(top);
             data = this.peek();
         }
         return true;
+    }
+
+    // 스택 size 구하기
+    public int size() {
+        int count = 0;
+        if (top == -1) {
+            return count;
+        }
+        while (top != -1) {
+            System.out.println("top is " + top);
+            System.out.println("count is " + count);
+            top--;
+            count++;
+        }
+        return count;
     }
 
 }

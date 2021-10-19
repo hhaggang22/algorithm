@@ -8,6 +8,6 @@ public class Practice05_1_1 {
         stack.push("5");
         stack.push("7");
 
-        System.out.println(stack.contains("9"));
+        System.out.println(stack.size());
     }
 }
