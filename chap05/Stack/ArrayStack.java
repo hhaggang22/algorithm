@@ -1,4 +1,4 @@
-package chap05.Practice;
+package chap05.Stack;
 
 import java.util.*;
 
