@@ -23,4 +23,25 @@ public class ArraryQueue {
 
         arr[++rear] = value;
     }
+
+    public Object dequeue() {
+        if (front >= MAX_QUEUE_SIZE) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+
+        Object value = arr[peek];
+        arr[peek] = null;
+        peek = ++front;
+
+        return value;
+    }
+
+    public Object peek() {
+        return arr[peek];
+    }
+
+    public boolean isFull() {
+        return MAX_QUEUE_SIZE - 1 == rear;
+    }
+
 }
