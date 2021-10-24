@@ -18,4 +18,15 @@ public class LinkedListQueue {
         }
     }
 
+    public void enqueue(Object value){
+        if(front == null){
+            front = new Node(value);
+            peek = front; 
+            rear = front;
+        }else{
+            rear.next = new Node(value);
+            rear = rear.next;
+        }
+    }
+
 }
