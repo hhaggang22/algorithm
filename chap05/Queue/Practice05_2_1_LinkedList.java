@@ -48,4 +48,13 @@ public class Practice05_2_1_LinkedList {
         return peek == null;
     }
 
+    public void printAll() {
+        while (peek.next != null) {
+            System.out.println(peek.getValue());
+            peek = peek.next;
+        }
+
+        System.out.println(peek.getValue());
+    }
+
 }
