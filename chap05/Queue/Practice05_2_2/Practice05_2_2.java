@@ -44,9 +44,14 @@ public class Practice05_2_2 {
         return peek.getValue();
     }
 
-    public void getLeft() {
+    public int getLeft() {
         Node pnext = peek.next;
         int count = 0;
+
+        if (pnext == null) {
+            System.out.println("대기인원은 " + count + "명 입니다.");
+            return 0;
+        }
 
         while (pnext.next != null) {
             if (pnext != null) {
@@ -63,6 +68,7 @@ public class Practice05_2_2 {
         }
 
         System.out.println("대기인원은 " + count + "명 입니다.");
+        return count;
     }
 
 }
