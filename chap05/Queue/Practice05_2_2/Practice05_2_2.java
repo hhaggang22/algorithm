@@ -1,6 +1,6 @@
-package chap05.Queue;
+package chap05.Queue.Practice05_2_2;
 
-public class Practice05_2_1_LinkedList {
+public class Practice05_2_2 {
     private Node front = null;
     private Node rear = null;
     private Node peek = null;
@@ -21,8 +21,8 @@ public class Practice05_2_1_LinkedList {
     public void enqueue(Object value) {
         if (front == null) {
             front = new Node(value);
-            peek = front;
             rear = front;
+            peek = front;
         } else {
             rear.next = new Node(value);
             rear = rear.next;
@@ -44,17 +44,25 @@ public class Practice05_2_1_LinkedList {
         return peek.getValue();
     }
 
-    public boolean isEmpty() {
-        return peek == null;
-    }
+    public void getLeft() {
+        Node pnext = peek.next;
+        int count = 0;
 
-    public void printAll() {
-        while (peek.next != null) {
-            System.out.println(peek.getValue());
-            peek = peek.next;
+        while (pnext.next != null) {
+            if (pnext != null) {
+                System.out.println("대기인원있음");
+                count++;
+                pnext = pnext.next;
+            } else {
+                System.out.println("대기인원없음");
+                pnext = pnext.next;
+            }
+        }
+        if (pnext != null) {
+            count++;
         }
 
-        System.out.println(peek.getValue());
+        System.out.println("대기인원은 " + count + "명 입니다.");
     }
 
 }

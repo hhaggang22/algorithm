@@ -1,4 +1,4 @@
-package chap05.Queue;
+package chap05.Queue.Practice05_2_1;
 
 public class Practice05_2_1_array {
     private Object[] arr;
