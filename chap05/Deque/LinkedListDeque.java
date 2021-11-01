@@ -42,4 +42,11 @@ public class LinkedListDeque {
         rear = rear.next;
     }
 
+    public Object removeFirst() {
+        Object value = front.getValue();
+        front = front.next;
+
+        return value;
+    }
+
 }
