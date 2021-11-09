@@ -49,4 +49,19 @@ public class LinkedListDeque {
         return value;
     }
 
+    public Object removeLast() {
+        Object value = rear.getValue();
+        Node temp = front;
+
+        while (temp != null) {
+            if (temp.next != rear) {
+                temp = temp.next;
+                continue;
+            }
+            rear = temp;
+            rear.next = null;
+        }
+        return value;
+    }
+
 }
