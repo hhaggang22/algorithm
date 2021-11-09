@@ -1,6 +1,6 @@
-package chap05.Deque;
+package chap05.Deque.Practice05_4_1;
 
-public class LinkedListDeque {
+public class Practice05_4_1_LinkedListDeque {
     private class Node {
         Object data = null;
         Node next = null;
@@ -65,18 +65,21 @@ public class LinkedListDeque {
     }
 
     public String printAll() {
+        if (front == null) {
+            return "deque is empty";
+        }
+
         String datas = "";
         Node temp = front;
 
-        while (temp != null) {
-            Object value = front.getValue();
-            temp = temp.next;
-            if (temp == null) {
-                datas += value;
-            } else {
-                datas += String.format("%s->", value);
-            }
+        for (; temp.next != null; temp = temp.next) { //for 문의 조건을 인덱스로 하지 않고도 이런식으로 사용될 수 있는점 확인!!
+            Object value = temp.getValue();
+            datas += String.format("%s->", value);
         }
+
+        Object value = temp.getValue();
+        datas += String.format("%s", value);
+
         return datas;
     }
 
