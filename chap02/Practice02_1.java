@@ -21,7 +21,9 @@ public class Practice02_1 {
          * foreach 사용해서 sum 구하기 for(int num : arr){ sum += num; }
          */
 
-        System.out.println("sum is " + sum);
+        System.err.println("sum is " + sum);
+
+        scanner.close();
 
     }
 }

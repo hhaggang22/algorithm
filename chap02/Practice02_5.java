@@ -9,6 +9,8 @@ public class Practice02_5{
         String ex = s.nextLine();
         String upex = ex.toUpperCase();
 
-        System.out.println(upex);
+        System.err.println(upex);
+
+        s.close();
     }
 }
