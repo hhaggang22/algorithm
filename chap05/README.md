@@ -5,7 +5,7 @@
 - 스택이란?
 
   - 데이터를 임시 저장하기 위한 자료구조
-  - LIFO(Last Input First Output) 구조 => ex) 브라우저의 앞/뒤로 가기, 캐시
+  - LIFO(Last Input First Output) 구조 => _ex) 브라우저의 앞/뒤로 가기, 캐시_
 
 - 스택의 특징
   1. 스택의 마지막 위치에 데이터를 삽입할 수 있다.
@@ -40,7 +40,7 @@ public class Exclass{
 
 - 큐란?
 
-  - FIFO(First Input First Output) 구조 => ex) 프린터 작업, 수강신청, 티켓 구매 대기열
+  - FIFO(First Input First Output) 구조 => _ex) 프린터 작업, 수강신청, 티켓, 구매 대기열_
 
 - 큐의 특징
 
@@ -54,6 +54,7 @@ public class Exclass{
   |원형 큐| front와 rear의 값을 순환적으로 변경하여 삽입과 삭제 시에 가용 공간을 낭비하지 않는다. |
 
   - 원형 큐에서 주의해야 할 점
+
     `(rear+1) % MAX_QUEUE_SIZE == front 이면 포화상태`
 
   `rear == front 이면 공백상태`
