@@ -58,3 +58,9 @@ public class Exclass{
     `(rear+1) % MAX_QUEUE_SIZE == front 이면 포화상태`
 
     `rear == front 이면 공백상태`
+
+## 3) 데크
+
+- 데크란?
+  - 스택과 큐는 한 방향에서 삽입과 삭제가 이루어짐 => 양방향 삽입/삭제 처리 X
+  - 스택과 큐의 혼합형 자료구조
