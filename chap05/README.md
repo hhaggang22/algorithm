@@ -57,4 +57,4 @@ public class Exclass{
 
     `(rear+1) % MAX_QUEUE_SIZE == front 이면 포화상태`
 
-  `rear == front 이면 공백상태`
+    `rear == front 이면 공백상태`
