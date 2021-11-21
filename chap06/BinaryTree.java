@@ -17,6 +17,10 @@ public class BinaryTree {
             this.left = left;
             this.right = right;
         }
+
+        public Object getValue() {
+            return this.value;
+        }
     }
 
     public void setRoot(Node node) {
@@ -25,5 +29,23 @@ public class BinaryTree {
 
     public Node getRoot() {
         return this.root;
+    }
+
+    public void bfs(Node root) {
+        LinkedListQueue queue = new LinkedListQueue();
+        queue.enqueue(root);
+
+        while (!queue.empty()) {
+            Node node = (Node) queue.dequeue();
+            System.out.println(node.getValue() + " ");
+
+            if (node.getLeftChild() != null) {
+                queue.enqueue(node.getLeftChild());
+            }
+
+            if (node.getRightChild() != null) {
+                queue.enqueue(node.getRightChild());
+            }
+        }
     }
 }
