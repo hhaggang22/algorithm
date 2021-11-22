@@ -21,6 +21,22 @@ public class BinaryTree {
         public Object getValue() {
             return this.value;
         }
+
+        public void setLeftChild(Node node) {
+            this.left = node;
+        }
+
+        public void setRightChild(Node node) {
+            this.right = node;
+        }
+
+        public Node getLeftChild() {
+            return this.left;
+        }
+
+        public Node getRightChild() {
+            return this.right;
+        }
     }
 
     public void setRoot(Node node) {
@@ -32,7 +48,7 @@ public class BinaryTree {
     }
 
     public void bfs(Node root) {
-        LinkedListQueue queue = new LinkedListQueue();
+        LinkedListQueue queue = new LinkedListQueue(); // 이미 구현했었던 연결리스트 큐는 포함하지 않겠다.
         queue.enqueue(root);
 
         while (!queue.empty()) {
