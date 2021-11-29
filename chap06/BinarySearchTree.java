@@ -80,6 +80,40 @@ public class BinarySearchTree {
         return target;
     }
 
+    // 이진탐색트리 삭제
+    public void insert(int value) {
+        if (this.root == null) {
+            this.root = new Node(value);
+            return;
+        }
+
+        Node target = this.root;
+        Node parent = null;
+
+        while (target != null) {
+            parent = target;
+
+            if (target.getValue() == value) {
+                System.out.println(String.format("%s는 중복된 값입니다.", value));
+                break;
+            }
+
+            if (target.getValue() > value) { // 삽입하려는 값이 root보다 작은 경우 => 왼쪽으로 가야함
+                target = target.getLeftChild();
+
+                if (target == null) { // 마지막 leaf 노드까지 왔을 때
+                    parent.setLeftChild(new Node(value));
+                }
+            } else { // 삽입하려는 값이 root보다 큰 경우 => 오른쪽으로 가야함
+                target = target.getRightChild();
+
+                if (target == null) {
+                    parent.setRightChild(new Node(value));
+                }
+            }
+        }
+    }
+
     // 너비우선탐색
     public void bfs(Node root) {
         LinkedListQueue queue = new LinkedListQueue();
