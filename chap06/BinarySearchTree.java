@@ -80,4 +80,24 @@ public class BinarySearchTree {
         return target;
     }
 
+    // 너비우선탐색
+    public void bfs(Node root) {
+        LinkedListQueue queue = new LinkedListQueue();
+        queue.enqueu(root);
+
+        while (!queue.empty()) {
+            Node node = (Node) queue.dequeue();
+            System.out.println(node.getValue() + " ");
+
+            if (node.getLeftChild() != null) {
+                queue.enqueue(node.getLeftChild());
+            }
+
+            if (node.getRightChild() != null) {
+                queue.enqueue(node.getRightChild());
+            }
+        }
+
+    }
+
 }
