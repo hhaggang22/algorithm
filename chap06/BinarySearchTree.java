@@ -80,7 +80,7 @@ public class BinarySearchTree {
         return target;
     }
 
-    // 이진탐색트리 삭제
+    // 이진탐색트리 삽입
     public void insert(int value) {
         if (this.root == null) {
             this.root = new Node(value);
@@ -112,6 +112,24 @@ public class BinarySearchTree {
                 }
             }
         }
+    }
+
+    // 이진탐색트리 삭제
+    /*
+     * 이진탐색트리의 삭제시에는 삽입보다 고려조건이 많다. 삭제 후, 노드를 대체해야하는데 이 대체 기준은 오른쪽 서브트리의 왼쪽 leaf
+     * 노드이다.
+     */
+
+    public Node getMinimumNode(Node node) {
+        if (node == null) {
+            return null;
+        }
+
+        if (node.getLeftChild() != null) {
+            return getMinimumNode(node.getLeftChild());
+        }
+
+        return node;타
     }
 
     // 너비우선탐색
