@@ -33,6 +33,10 @@ public class BinarySearchTree {
             return this.value;
         }
 
+        public void setValue(int value) {
+            this.value = value;
+        }
+
         public void setLeftChild(Node node) {
             this.left = node;
         }
@@ -119,6 +123,45 @@ public class BinarySearchTree {
      * 이진탐색트리의 삭제시에는 삽입보다 고려조건이 많다. 삭제 후, 노드를 대체해야하는데 이 대체 기준은 오른쪽 서브트리의 왼쪽 leaf
      * 노드이다.
      */
+
+    public Node delete(Node root, int value) {
+        if (root == null) {
+            return null;
+        }
+
+        if (root.getValue() == value) {
+            if (root.getLeftChild() == null && root.getRightChild() == null) {
+                // 자식노드가 없는 경우
+                root = null;
+                return null;
+            } else if (root.getLeftChild() != null && root.getRightChild() == null) {
+                // 자식노드가 왼쪽에만 있는 경우
+                Node left = root.getLeftChild();
+                root = null;
+                return left;
+            } else if (root.getRightChild() != null && root.getLeftChild() == null) {
+                // 자식노드가 오른쪽에만 있는 경우
+                Node right = root.getRightChild();
+                root = null;
+                return right;
+            } else {
+                // 자식노드가 2개인 경우
+                Node children = getMinimumNode(root.getRightChild());
+                root.setValue(children.getValue());
+                root.setRightChild(delete(root.getRightChild(), children.getValue()));
+            }
+        }
+
+        if (root.getValue() > value) {
+            // 삭제하려는 노드가 root보다 왼쪽
+            root.setLeftChild(delete(root.getLeftChild(), value));
+        } else {
+            // 삭제하려는 노드가 root보다 오른쪽
+            root.setRightChild(delete(root.getRightChild(), value));
+        }
+
+        return root;
+    }
 
     public Node getMinimumNode(Node node) {
         if (node == null) {
