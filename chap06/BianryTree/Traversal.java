@@ -1,6 +1,6 @@
-package chap06;
+package chap06.BianryTree;
 
-import chap06.BinarySearchTree.Node;
+import chap06.BianryTree.BinarySearchTree.Node;;
 
 public class Traversal {
 

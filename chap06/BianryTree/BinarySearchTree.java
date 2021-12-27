@@ -1,4 +1,4 @@
-package chap06;
+package chap06.BianryTree;
 
 public class BinarySearchTree {
     private Node root;
@@ -172,7 +172,7 @@ public class BinarySearchTree {
             return getMinimumNode(node.getLeftChild());
         }
 
-        return node;타
+        return node;
     }
 
     // 너비우선탐색

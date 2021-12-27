@@ -1,4 +1,4 @@
-package chap06;
+package chap06.BianryTree;
 
 public class BinaryTree {
     private Node root;

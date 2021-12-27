@@ -1,4 +1,4 @@
-package chap06;
+package chap06.BianryTree;
 
 public class CompleteBinaryTree {
     // 완전 이진트리는 이진트리랑 다르게 인덱스로 노드를 탐색할 수 있다.
