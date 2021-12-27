@@ -71,7 +71,7 @@ public class MinHeapTree {
      * 1. 힙 배열의 맨 마지막 위치에 value를 넣는다. 2. 부모 노드의 값과 비교한다. 3. insert할 value가 부모 노드보다
      * 작으면 부모 노드와 값을 바꾼다.(swap)
      */
-    public void insert(int value) { //내가 생각한 코드
+    public void insert(int value) { // 내가 생각한 코드
         heap[++pointer] = value;
         int currentIndex = pointer;
 
@@ -80,7 +80,20 @@ public class MinHeapTree {
         }
     }
 
-    /*
-    */
+    // 답안코드 => 내코드와 왜 다를까??
+    // while문을 쓰지 않으면 노드의 개수가 4개까지는 괜찮지만, 5개 이상 이후 노드가 더 작은 노드가 들어오면 swap을 하지를 못한다.
+    // 그니까 pointer가 6일 때 currentIndex가 3으로 바뀌는데,
+    // 만약 while문을 안쓰면 head[3] 과 heap[1]을 비교할 수 없어서 가장 작은 노드인 3이 맨 앞으로 가지 못한다!!
+    // 계속 자신의 부모노드와 비교하면서 가장 작은 것을 앞으로 보내야하기 때문에 while문이 필요하다.
+
+    public void insertAnswer(int value) {
+        heap[++pointer] = value;
+        int currentIndex = pointer;
+
+        while (heap[currentIndex] < heap[getParentIndex(currentIndex)]) {
+            swap(currentIndex, getParentIndex(currentIndex));
+            currentIndex = getParentIndex(currentIndex);
+        }
+    }
 
 }
